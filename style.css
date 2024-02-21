@@ -1,167 +1,55 @@
-:root{
-    --red:crimson;
-    --green:#53bf9d;
-    --yellow:#ffc54d;
-    --white:whitesmoke;
-}
-
-body,h2{
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.landing{
-    background-image: url(img.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: var(--white);
-}
-
-header a{
-    text-decoration: none;
-    color: var(--yellow);
-    min-width: 120px;
-}
-
-header{
+body{
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 1em;
-    padding: 1em;
-}
-
-#menu1{
-    margin-left: 30px;
-}
-
-#logo{
-    flex:3;
-    font-size: 1.5em;
-    font-weight: bolder;
-    min-width: 260px;
-}
-
-nav{
-    flex: 2;
-    display: flex;
-}
-
-nav a{
-    flex: 1;
-}
-
-nav a:hover{
-    color: yellowgreen;
-}
-
-.maintext{
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
     justify-content: center;
-    padding: 2em;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
 }
-
-.tagline1{
-    color: var(--white);
-    font-size: 2.5em;
-    font-weight: bolder;
+#calculator{
+    font-family: arial,sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
 }
-
-.tagline2{
-    color:var(--white);
-    font-size: 2em;
-
+#display{
+    width: 440px;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
 }
-
-.callus{
-    width: 195px;
-    background-color: rgba(0, 0, 0, 0.8);
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
 }
-
-button:hover{
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
     cursor: pointer;
 }
-
-.maintext div{
-    margin-top: .75em;
+button:hover{
+     background-color: hsl(0, 0%, 40%);
 }
-
-.maintext button{
-    width: 20vw;
-    margin-top: 2em;
-    border-radius: 10px;
-    padding: .7em;
-    background-color: var(--yellow);
-    color: black;
-    font-weight: bolder;
-    border: 1px solid yellow;
+buttton:active{
+    background-color: hsl(0, 0%, 50%);
 }
-
-.menu{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    background: linear-gradient(to right,rgb(100,100,100),rgb(53,52,52));
-    color: var(--white);
+.operator-btn{
+    background-color: orange;
 }
-
-#menuheading,#locheading{
-    background: linear-gradient(to right,rgb(100,100,100),rgb(53,52,52));
-    font-size: 2.5em;
-    display: flex;
-    justify-content: center;
+.operator-btn:hover{
+    background-color: hsl(35, 100%, 65%);
 }
-
-.menu th{
-    color: #ffc54d;
-    font-size: 1.8em;
-}
-
-table{
-    width: 100%;
-    padding: 1em;
-}
-
-.menu tr{
-    display: flex;
-    justify-content: center;
-    margin-top: .8em;
-}
-
-.menu td:nth-child(1){
-    flex: 1;
-    justify-self: left;
-}
-
-.menu td:nth-child(2){
-    justify-self: right;
-}
-
-.maincourse{
-    grid-row: span 2;
-}
-
-.locations{
-    background: linear-gradient(to right,rgb(100,100,100),rgb(53,52,52));
-    color: var(--white);
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.locations h2{
-    color: var(--yellow);
-    margin-bottom: .8em; ;
-}
-
-.locations div{
-    flex: 1;
-    padding: 1em;
-    min-width: 220px;
-}
-
-footer{
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--white);
-    padding: .25em 1em;
+.operator-btn:active{
+    background-color: hsl(0, 0%, 75%);
 }
